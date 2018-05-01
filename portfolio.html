@@ -7,13 +7,7 @@
   <title>Portfolio | Tony Rosenow</title>
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/emailjs.css">
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script type="text/javascript">
-    (function () {
-      emailjs.init("user_gVPLlFMCftgGEobm7Z81j");
-    })();
-  </script>
+
 </head>
 
 <body>
@@ -99,22 +93,6 @@
       </div>
     </section>
   </div>
-
-  <form id="myform" onsubmit="emailjs.sendForm('default_service', 'road_rover_itinerary', this); return false;" method="post">
-    <label>reply_to</label>
-    <input type="text" name="reply_to" />
-    <label>from_name</label>
-    <input type="text" name="from_name" />
-    <label>to_name</label>
-    <input type="text" name="to_name" />
-    <label>message_html</label>
-    <input type="text" name="message_html" />
-    <br>
-    <br>
-    <button>
-      Send
-    </button>
-  </form>
 
   <footer>
     <div class="container">

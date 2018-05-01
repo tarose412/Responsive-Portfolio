@@ -7,13 +7,7 @@
   <title>Contact | Tony Rosenow</title>
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/emailjs.css">
-  <script language="javascript">
-    function emailCurrentPage() {
-      window.location.href="mailto:?subject="+document.title+"&body="+escape(window.location.href);
-    }
-  </script>
-  
+
 </head>
 
 <body>
@@ -70,7 +64,38 @@
     </section>
   </div>
 
-  <a href="javascript:emailCurrentPage()">Email my intinerary to me!</a>
+  <script>
+    $.ajax({
+      type: "POST",
+      url: "https://mandrillapp.com/api/1.0/messages/send.json",
+      data: {
+        'key': '56865711986a06d0f53b7aea2012ca21-us18',
+        'message': {
+          'from_email': 'roadroverproject2018@gmail.com',
+          'to': [
+          {
+            'email': 'recipient_no_1@email.here',
+            'name': 'recipient name (optional)',
+            'type': 'to'
+          }
+        ],
+        'autotext': 'true',
+        'subject': 'Your Road Rover Itinerary is ready!',
+        'html': 'Road Rover Itinerary'
+          }
+        }
+      }).done(function (response) {
+        console.log(response);
+      });
+
+        $('#emailItinerary').click(function() {
+          $.ajax({
+            // ...
+          });
+        });
+
+
+  </script>
 
   <footer>
     <div class="container">
