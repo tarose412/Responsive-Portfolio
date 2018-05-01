@@ -7,6 +7,11 @@
   <title>Contact | Tony Rosenow</title>
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <script language="javascript">
+    function emailCurrentPage () {
+      window.location.href="mailto?subject="+document.title+"&body="+escape(window.location.href);
+    }
+  </script>
 </head>
 
 <body>
@@ -63,11 +68,17 @@
     </section>
   </div>
 
+  <a href="javascript:emailCurrentPage()">Email my intinerary to me!</a>
+
   <footer>
     <div class="container">
       Copyright &copy; 2018 Tony Rosenow
     </div>
   </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
 </body>
 
 </html>
